@@ -16,13 +16,7 @@ namespace ClassLibrary2
             try
             {
                 MySqlConnection conn = new MySqlConnection();
-                OperatingSystem os = System.Environment.OSVersion;
-                Console.WriteLine("OS platform : "+os.Platform.ToString());
-                string path = "";
-                if (os.Platform.ToString() == "Win32NT")
-                    path = "\\public\\DBinfo.json";
-                else
-                    path = "/public/DBinfo.json";
+                string path = "/public/DBinfo.json";
                 string result = new StreamReader(File.OpenRead(path)).ReadToEnd();
                 JObject jo = JsonConvert.DeserializeObject<JObject>(result);
                 Hashtable map = new Hashtable();
