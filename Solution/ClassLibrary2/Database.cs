@@ -17,7 +17,7 @@ namespace ClassLibrary2
             {
                 MySqlConnection conn = new MySqlConnection();
                 OperatingSystem os = System.Environment.OSVersion;
-                //Console.WriteLine(os.Platform.ToString());
+                Console.WriteLine("OS platform : "+os.Platform.ToString());
                 string path = "";
                 if (os.Platform.ToString() == "Win32NT")
                     path = "\\public\\DBinfo.json";
