@@ -17,7 +17,7 @@ namespace ClassLibrary2
             {
                 MySqlConnection conn = new MySqlConnection();
 
-                string path = "\\public\\DBinfo.json";
+                string path = "/public/DBinfo.json";
 
                 FileStream fs = File.OpenRead(path);
                 string result = new StreamReader(File.OpenRead(path)).ReadToEnd();
