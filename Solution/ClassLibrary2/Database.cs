@@ -19,9 +19,7 @@ namespace ClassLibrary2
 
                 string path = "/public/DBinfo.json";
 
-                FileStream fs = File.OpenRead(path);
                 string result = new StreamReader(File.OpenRead(path)).ReadToEnd();
-                fs.Close();
                 JObject jo = JsonConvert.DeserializeObject<JObject>(result);
                 Hashtable map = new Hashtable();
                 foreach (JProperty jp in jo.Properties())
